@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121026">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. HEADER NHẬT KÝ -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhật ký"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- 2. GRID 4 THẺ NHẬT KÝ CHI TIẾT -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2">
+
+                <!-- 🥗 THẺ 1: NHẬT KÝ ĂN UỐNG -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="#1D1A38"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                app:cardBackgroundColor="#2A2845"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="🍴"
+                                    android:textSize="13sp" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <!-- Circle Icon Ăn Uống -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="#2A2845"
+                            app:cardCornerRadius="38dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="🥗"
+                                android:textSize="36sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nhật ký ăn uống"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="Xem các bữa ăn và calo đã nạp"
+                            android:textColor="#8E8B9E"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/btnFoodDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#2A2845"
+                            android:gravity="center"
+                            android:text="Xem chi tiết ›"
+                            android:textColor="#A78BFA"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 🏃‍♂️ THẺ 2: NHẬT KÝ VẬN ĐỘNG -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="#1D1A38"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                app:cardBackgroundColor="#2A2845"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="🏃"
+                                    android:textSize="13sp" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <!-- Circle Icon Vận Động -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="#2A2845"
+                            app:cardCornerRadius="38dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="🏃‍♂️"
+                                android:textSize="36sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nhật ký vận động"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="Xem các hoạt động và calo đã tiêu hao"
+                            android:textColor="#8E8B9E"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/btnWorkoutDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#2A2845"
+                            android:gravity="center"
+                            android:text="Xem chi tiết ›"
+                            android:textColor="#A78BFA"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 💧 THẺ 3: NHẬT KÝ NƯỚC -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="#1D1A38"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                app:cardBackgroundColor="#2A2845"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="💧"
+                                    android:textSize="13sp" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <!-- Circle Icon Nước -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="#2A2845"
+                            app:cardCornerRadius="38dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="💧"
+                                android:textSize="36sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nhật ký nước"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvJournalWaterVal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="1.500 / 2.000 ml"
+                            android:textColor="#3B82F6"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/pbJournalWater"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="6dp"
+                            android:max="2000"
+                            android:progress="1500"
+                            android:progressTint="#3B82F6" />
+
+                        <TextView
+                            android:id="@+id/btnWaterDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#2A2845"
+                            android:gravity="center"
+                            android:text="Xem chi tiết ›"
+                            android:textColor="#A78BFA"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ⚖ THẺ 4: LỊCH SỬ CÂN NẶNG -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="#1D1A38"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                app:cardBackgroundColor="#2A2845"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="⚖"
+                                    android:textSize="13sp" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <!-- Circle Icon Cân Nặng -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+                            android:layout_marginVertical="10dp"
+                            app:cardBackgroundColor="#2A2845"
+                            app:cardCornerRadius="38dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="⚖️"
+                                android:textSize="36sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lịch sử cân nặng"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Cập nhật mới nhất"
+                            android:textColor="#8E8B9E"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tvJournalWeightVal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="48.0 kg • 25/07/2026"
+                            android:textColor="#A78BFA"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnWeightDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#2A2845"
+                            android:gravity="center"
+                            android:text="Xem chi tiết ›"
+                            android:textColor="#A78BFA"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 3. BOTTOM NAVIGATION BAR (4 NÚT CÂN ĐỐI) -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#1D1A38"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Trang chủ -->
+        <LinearLayout
+            android:id="@+id/menuHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏠"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trang chủ"
+                android:textColor="#8E8B9E"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Nhật ký -->
+        <LinearLayout
+            android:id="@+id/menuJournal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhật ký"
+                android:textColor="#A78BFA"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Thống kê -->
+        <LinearLayout
+            android:id="@+id/menuAnalytics"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:textColor="#8E8B9E"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Hồ sơ -->
+        <LinearLayout
+            android:id="@+id/menuProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hồ sơ"
+                android:textColor="#8E8B9E"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
