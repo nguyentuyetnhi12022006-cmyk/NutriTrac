@@ -1,4 +1,4 @@
-# 🚀 Fitness Tracker (Personal Development Project)
+# 🚀 NutriTrac (Personal Development Project)
 
 > Dự án cá nhân phát triển từ đồ án cuối kỳ môn **Lập trình di động (LTDD)**. Ứng dụng tập trung vào việc theo dõi sức khỏe và quản lý dinh dưỡng mỗi ngày.
 ---
